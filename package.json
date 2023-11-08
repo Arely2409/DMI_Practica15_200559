@@ -1,0 +1,23 @@
+{
+  "name": "mx.utxj.ti.dmi.api_videogame",
+  "version": "1.0.0",
+  "description": "Api rest para realizar las operaciones CRUD a una base de datos relacional del proyecto de videojuego",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Api",
+    "rest",
+    "MySQL",
+    "Sequelize",
+    "Express"
+  ],
+  "author": "Arely Aguilar Farias",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {}
+}
