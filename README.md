@@ -13,10 +13,10 @@
 </P>
 
 <center>
-  <img src=https://github.com/Arely2409/DMI_Flutter_Practica15_200559/assets/84819096/dc75049b-a397-4038-b850-3d4c6555e442 alt="Ejemplo" width="250" height="500" align="left">
-  <img src=https://github.com/Arely2409/DMI_Flutter_Practica15_200559/assets/84819096/7d7b760b-c62f-40f6-a878-b8836d82bb1a alt="Ejemplo" width="250" height="500" align="left">
-  <img src=https://github.com/Arely2409/DMI_Flutter_Practica15_200559/assets/84819096/960860c2-a58e-4da9-9d96-f3ad949d9a45 alt="Ejemplo" width="250" height="500" align="left">
-  <img src=https://github.com/Arely2409/DMI_Flutter_Practica15_200559/assets/84819096/25e06772-c207-4e33-a42f-943760a8333f alt="Ejemplo" width="250" height="500" align="left">
-  <img src=https://github.com/Arely2409/DMI_Flutter_Practica15_200559/assets/84819096/4f2998bf-3f69-40da-9a8d-ff39aee392a1 alt="Ejemplo" width="250" height="500" align="left">
-  <img src=[https://github.com/Arely2409/DMI_Flutter_Practica15_200559/assets/84819096/4f2998bf-3f69-40da-9a8d-ff39aee392a1](https://github.com/Arely2409/DMI_Flutter_Practica15_200559/assets/84819096/6fa57db2-4fcf-4b91-af42-316b68e87ae6) alt="Ejemplo" width="250" height="500" align="left">
+  <img src=https://github.com/Arely2409/DMI_Flutter_Practica15_200559/assets/84819096/dc75049b-a397-4038-b850-3d4c6555e442 alt="Ejemplo" width="500" height="500" align="left">
+  <img src=https://github.com/Arely2409/DMI_Flutter_Practica15_200559/assets/84819096/7d7b760b-c62f-40f6-a878-b8836d82bb1a alt="Ejemplo" width="500" height="500" align="left">
+  <img src=https://github.com/Arely2409/DMI_Flutter_Practica15_200559/assets/84819096/960860c2-a58e-4da9-9d96-f3ad949d9a45 alt="Ejemplo" width="500" height="500" align="left">
+  <img src=https://github.com/Arely2409/DMI_Flutter_Practica15_200559/assets/84819096/25e06772-c207-4e33-a42f-943760a8333f alt="Ejemplo" width="500" height="500" align="left">
+  <img src=https://github.com/Arely2409/DMI_Flutter_Practica15_200559/assets/84819096/4f2998bf-3f69-40da-9a8d-ff39aee392a1 alt="Ejemplo" width="500" height="500" align="left">
+  <img src=https://github.com/Arely2409/DMI_Flutter_Practica15_200559/assets/84819096/6fa57db2-4fcf-4b91-af42-316b68e87ae6 alt="Ejemplo" width="500" height="500" align="left">
 </center>
