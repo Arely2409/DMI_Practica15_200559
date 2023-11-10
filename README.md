@@ -7,8 +7,8 @@
 <P>
   <h1 align="center">UNIVERSIDAD TECNOLÓGICA DE XICOTEPEC DE JUÁREZ</h1>
   <h2 align="center">ARELY AGUILAR FARIAS M-200559</h2>
-  <h3 align="center">Creación de el API para la aplicacion de videojuegos</h3>
-  <h5 align="center">Creación de el API para la aplicaciÓn de videojuegos, ya se crearon las rutas para la creaciÓn de un CRUD</h5>
+  <h3 align="center">Implementacion de las rutas y middlewares para el jugador</h3>
+  <h5 align="center">Implementacion de las rutas y middlewares para el jugador, ya se crearon las rutas para la creaciÓn de un CRUD y asi se podra buscar, eliminar, actualizar y editar cada jugador</h5>
   <h3 align="center">Fecha de entrega: 10/Noviembre/2023</h3>
 </P>
 
