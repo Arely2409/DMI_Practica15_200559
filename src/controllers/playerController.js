@@ -1,7 +1,19 @@
+import dbConnection from "../config/db.js";
+import Player from "../models/Player.js";
 
 const createPlayer = (req, res) =>
 {
     console.log("Se ha solicitado la creacion de un nuevo jugador");
+    res.status(200);
+    res.send("Se ha solicitado la creacion de un nuevo jugador");
+}
+
+const findAll = (req,res) => {
+    console.log("Se ha solicitado la creacion de un nuevo jugador");
+    const allPlayers = Player.findAll()
+    //console.log(allPlayers.every(player => player instanceof Player));
+    //console.log("All players: ", JSON.stringify(allPlayers, null, 2));
+    console.log(allPlayers);
     res.status(200);
     res.send("Se ha solicitado la creacion de un nuevo jugador");
 }
@@ -47,4 +59,4 @@ const deletePlayer = (req, res) =>
     res.send(`Se ha solicitado la eliminacion de la cuenta del jugador:${playerID}`);
 }
 
-export {createPlayer, findPlayerByID, findPlayerByEmail, updatePlayer, changePlayerPortrait, deletePlayer}
+export {createPlayer, findPlayerByID, findPlayerByEmail, updatePlayer, changePlayerPortrait, deletePlayer, findAll}
