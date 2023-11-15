@@ -10,6 +10,8 @@ const port = 20055
 api.use("/players", playerRoutes)
 
 api.use(bodyParser.urlencoded({ extended: false}))
+api.use("/players", playerRoutes)
+
 api.listen(port, () => {
     console.log(`El API ha sido iniciado en el puerto: ${port}`)
 })
