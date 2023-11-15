@@ -1,38 +1,71 @@
 import dbConnection from "../config/db.js";
 import Player from "../models/Player.js";
 
-const createPlayer = (req, res) =>
+
+const createPlayer = async(req, res) =>
 {
     console.log("Se ha solicitado la creacion de un nuevo jugador");
-    res.status(200);
-    res.send("Se ha solicitado la creacion de un nuevo jugador");
+    const {name, email, nickname, birthdate} = req.body
+    console.log(req.body)
+    const newPlayer = await Player.create(req.body)
+    if(newPlayer){
+        res.status(200);
+        res.json(`Se ha creado un nuevo jugador con el nombre:  ${name}, Email: ${email}, Alias: ${nickname}, Fecha de nacimiento: ${birthdate}`);
+    }else{
+        res.status(400);
+        res.json({
+            messageStatus: `Hubo un error al intentar crear al jugador, porfavor verifica los datos`
+        });
+    }
 }
 
-const findAll = (req,res) => {
-    console.log("Se ha solicitado la creacion de un nuevo jugador");
-    const allPlayers = Player.findAll()
-    //console.log(allPlayers.every(player => player instanceof Player));
-    //console.log("All players: ", JSON.stringify(allPlayers, null, 2));
+const findAll = async (req,res) => {
+    console.log("Se ha solicitado la consulta de todos los jugadores");
+    const allPlayers = await Player.findAll();
     console.log(allPlayers);
-    res.status(200);
-    res.send("Se ha solicitado la creacion de un nuevo jugador");
+
+    if(allPlayers === null){
+        res.json({
+            messageStatus: `No hay jugadores registrados.`
+        });
+    }else{
+        res.status(200);
+        res.json(allPlayers)
+    }
 }
 
 
-const findPlayerByID = (req, res) =>
+const findPlayerByID = async(req, res) =>
 {
     const playerID = req.params.playerID
     console.log(`Se ha solicitado buscar al jugador con id: ${playerID}`);
-    res.status(200);
-    res.send(`Se ha solicitado buscar al jugador con id: ${playerID}`);
+    const playerFound =  await Player.findByPk(playerID)
+
+    if(playerFound === null){
+        res.status(400);
+        res.send(`El jugador con el ID:  ${playerID}, no se encuentra la BD.`);
+    }else{
+        res.status(200);
+        res.json(playerFound)
+    }
 }
 
-const findPlayerByEmail = (req, res) =>
+const findPlayerByEmail = async(req, res) =>
 {
     const playerEmail = req.params.playerEmail
     console.log(`Se ha solicitado buscar al jugador con email: ${playerEmail}`);
-    res.status(200);
-    res.send(`Se ha solicitado buscar al jugador con email: ${playerEmail}`);
+
+    const playerFoundEmail =  await Player.findOne({where: {email: playerEmail}})
+
+    if(playerFoundEmail === null){
+        res.status(400);
+        res.json({
+            messageStatus: `El jugador con el email: ${playerEmail}, no se encuentra en la BD.`
+        });
+    }else{
+        res.status(200);
+        res.json(playerFoundEmail)
+    }
 }
 
 const updatePlayer = (req, res) =>
