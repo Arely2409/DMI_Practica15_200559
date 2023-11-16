@@ -1,23 +1,30 @@
-import dbConnection from "../config/db.js";
 import Player from "../models/Player.js";
-
 
 const createPlayer = async(req, res) =>
 {
-    console.log("Se ha solicitado la creacion de un nuevo jugador");
-    const {name, email, nickname, birthdate} = req.body
-    console.log(req.body)
-    const newPlayer = await Player.create(req.body)
-    if(newPlayer){
-        res.status(200);
-        res.json(`Se ha creado un nuevo jugador con el nombre:  ${name}, Email: ${email}, Alias: ${nickname}, Fecha de nacimiento: ${birthdate}`);
-    }else{
-        res.status(400);
-        res.json({
-            messageStatus: `Hubo un error al intentar crear al jugador, porfavor verifica los datos`
+    try{
+        console.log("Se ha solicitado la creacion de un nuevo jugador");
+        const {name, email, nickname, birthdate} = req.body;
+        console.log(req.body)
+
+        const newPlayer = await Player.create(req.body)
+        
+        if(newPlayer){
+            res.status(200).json({
+                message: `Se ha creado un nuevo jugador con el nombre:  ${name}, Email: ${email}, Alias: ${nickname}, Fecha de nacimiento: ${birthdate}`
+            });
+        }else{
+            res.status(400).json({
+                message: `Hubo un error al intentar crear al jugador, porfavor verifica los datos`
+            });
+        }
+    }catch(error){
+        console.error("Error al crear un jugador:", error);
+        res.status(500).json({
+            message: "Hubo un error al intentar crear al jugador."
         });
     }
-}
+};
 
 const findAll = async (req,res) => {
     console.log("Se ha solicitado la consulta de todos los jugadores");
